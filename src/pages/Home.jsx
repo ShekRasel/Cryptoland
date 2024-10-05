@@ -16,11 +16,11 @@ function Home() {
           </div>
           <div className=' relative hidden lg:block'>
             <div>
-              <img src="/public/images/home2-bg.png" alt="" className='mr-24'/>
+              <img src="images/home2-bg.png" alt="" className='mr-24'/>
             </div>
             <div className=' absolute top-0 left-44  justify-center flex flex-col items-center animate-custom-bounce'>
-              <img src="/public/images/h2-bit-l.png" alt="" className=''/>
-              <img src="/public/images/h2-bit-m.png" alt="" className='w-20 mt-32'/>
+              <img src="images/h2-bit-l.png" alt="" className=''/>
+              <img src="images/h2-bit-m.png" alt="" className='w-20 mt-32'/>
             </div>
           </div>
 
