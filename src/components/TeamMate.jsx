@@ -32,10 +32,14 @@ function TeamMate() {
     ]
   return (
     <div className='px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72 pt-24 mb-24'>
-      <h2 className='text-blue-600 text-center text-lg font-semibold'>Expert Team</h2>
-      <h1 className='text-indigo-900 text-3xl font-semibold mt-6 text-center'>Meet Our Team</h1>
-      <p className='text-gray-500 text-center mt-4'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+     <div className='flex justify-center'>
+        <div className='lg:w-1/2'>
+          <h2 className='text-blue-600 text-center text-lg font-semibold'>Expert Team</h2>
+          <h1 className='text-indigo-900 text-3xl font-semibold mt-6 text-center'>Meet Our Team</h1>
+          <p className='text-gray-500 text-center mt-4'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
 
+        </div>
+     </div>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-16 gap-12 xl:gap-0 '>
         {
           teams.map((team,index)=>( 

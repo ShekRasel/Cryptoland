@@ -53,9 +53,13 @@ function Testimonials() {
   return (
     <div className='px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72 pt-24 pb-24 bg-slate-50'>
 
-        <h1 className='text-lg font-semibold text-blue-600 text-center'>Customer Reviews</h1>
-        <h1 className='text-4xl font-semibold text-indigo-900 text-center mt-4'>Our Testimonials</h1>
-        <p className='text-gray-500 xl:px-34 text-center mt-8'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+       <div className='flex justify-center'>
+            <div className='lg:w-1/2'>
+                <h1 className='text-lg font-semibold text-blue-600 text-center'>Customer Reviews</h1>
+                <h1 className='text-4xl font-semibold text-indigo-900 text-center mt-4'>Our Testimonials</h1>
+                <p className='text-gray-500 xl:px-34 text-center mt-8'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+            </div>
+       </div>
 
         <div className=' mt-12  '>
             <div className='  '>
@@ -65,8 +69,12 @@ function Testimonials() {
                                 <div className={`px-2 py-2  rounded-lg  flex-shrink-0 w-full md:w-1/2 xl:w-1/3 transition-all ease-in-out duration-500`} key={index}
                                 style={{transform:`translateX(-${currentIndex * 100}%)`}}
                                 >
-                                    <div className='border px-4 py-8 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all ease-in-out duration-500'>
-                                        <p className='text-gray-500 '>{Testimonial.massage}</p>
+                                    
+
+                                    <div className=' px-4 pb-8 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all ease-in-out duration-500 relative'>
+                                    <div className='h-8 bg-blue-600 right-0 w-8 absolute rounded-es-full'>
+                                    </div>
+                                        <p className='text-gray-500 pt-8'>{Testimonial.massage}</p>
                                         <div className='flex gap-4 items-center mt-10'>
                                             <img src={Testimonial.photo} alt="" className='w-12'/>
                                             <div>
