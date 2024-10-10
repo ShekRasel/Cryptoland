@@ -62,14 +62,14 @@ function Navbar() {
 
                         <li onMouseEnter={showHidePagesDiv} onMouseLeave={showHidePagesDiv} className=''>
                             <div className='py-8'>
-                                <NavLink>Pages</NavLink>
+                                <Link>Pages</Link>
                                 {pagesDiv ? 
                                     <div className='mt-3 absolute pt-4 shadow-lg'>
                                         <div className={` rounded-md bg-white transition-all ease-out duration-500 delay-1000 ${pagesDiv ? ' translate-y-0 opacity-100':' -translate-y-5 opacity-0'}`}>
                                             <ul className='text-gray-500  font-semibold flex flex-col gap-4 py-4 pr-20 pl-10'>
                                                 <li className='hover:text-indigo-700'><Link>About Us</Link></li>
-                                                <li className='hover:text-indigo-700'><Link>Sign In</Link></li>
-                                                <li className='hover:text-indigo-700'><Link>Sign UP</Link></li>
+                                                <li className='hover:text-indigo-700'><Link to={'signin'}>Sign In</Link></li>
+                                                <li className='hover:text-indigo-700'><Link to={'signup'}>Sign UP</Link></li>
                                                 <li className='hover:text-indigo-700'><Link>Reset Password</Link></li>
                                                 <li className='hover:text-indigo-700'><Link>Mail Sussess</Link></li>
                                                 <li className='hover:text-indigo-700'><Link>404 Error</Link></li>
