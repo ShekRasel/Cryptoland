@@ -8,7 +8,7 @@ import TeamMate from '../components/TeamMate';
 function About() {
   return (
     <div className=''>
-      <CommonComponent about='About Us' About='About' aboutLink='/'/>
+      <CommonComponent about='About Us'/>
 
       <div className='px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72 pt-24 pb-24'>
         <div className='lg:flex gap-16'>
