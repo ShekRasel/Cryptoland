@@ -33,19 +33,19 @@ function Testimonials() {
     },
     {
         massage : '“A vast number of clients decide to create dedicated software is the online store. It is nothing but a website with a catalog of products and the possibility.”',
-        photo:'/public/images/testi-3.png',
+        photo:'images/testi-3.png',
         name : 'David Warner',
         designation : 'Graphics Designer'
     },
     {
         massage : '“A vast number of clients decide to create dedicated software is the online store. It is nothing but a website with a catalog of products and the possibility.”',
-        photo:'/public/images/testi-2 (1).png',
+        photo:'images/testi-2 (1).png',
         name : 'Peter Parker',
         designation : 'Product Designer'
     },
     {
         massage : '“A vast number of clients decide to create dedicated software is the online store. It is nothing but a website with a catalog of products and the possibility.”',
-        photo:'/public/images/testi-1.png',
+        photo:'images/testi-1.png',
         name : 'Jon Son',
         designation : 'Designer'
     },
