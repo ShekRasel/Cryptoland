@@ -70,8 +70,8 @@ function Navbar() {
                                                 <li className='hover:text-indigo-700'><Link to={'signin'}>Sign In</Link></li>
                                                 <li className='hover:text-indigo-700'><Link to={'signup'}>Sign UP</Link></li>
                                                 <li className='hover:text-indigo-700'><Link to={'passwordReset'}>Reset Password</Link></li>
-                                                <li className='hover:text-indigo-700'><Link>Mail Sussess</Link></li>
-                                                <li className='hover:text-indigo-700'><Link>404 Error</Link></li>
+                                                <li className='hover:text-indigo-700'><Link to={'mailSusscess'}>Mail Sussess</Link></li>
+                                                <li className='hover:text-indigo-700'><Link to={'errorPage'}>404 Error</Link></li>
                                             </ul>
                                         </div>
                                     </div>:
@@ -83,7 +83,7 @@ function Navbar() {
                     
                         <li onMouseEnter={showHideBlogDiv} onMouseLeave={showHideBlogDiv}>
                         <div className=' py-8'>
-                                <NavLink>Blog</NavLink>
+                                <h1 className='cursor-pointer'>Blog</h1>
                                 {blogDiv ? 
                                     <div className='absolute mt-3 pt-4'>
                                         <div className={` overflow-hidden rounded-md bg-white transition-all ease-out duration-500 shadow-lg ${blogDiv ? 'max-h-96':'max-h-0'}`}>

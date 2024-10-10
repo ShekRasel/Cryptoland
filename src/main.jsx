@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import PasswordReset from './pages/PasswordReset';
+import MailSuccess from './pages/MailSuccess';
+import Error from './pages/Error';
 
 let routes = createBrowserRouter([
     {
@@ -41,6 +43,13 @@ let routes = createBrowserRouter([
           path:'passwordReset',
           element:<PasswordReset/>
         },
+        {
+          path:'mailSusscess',
+          element:<MailSuccess/>
+        },{
+          path: 'errorPage',
+          element:<Error/>
+        }
       ]
     }
 ]);
