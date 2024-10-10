@@ -52,7 +52,7 @@ function Footer() {
             </div>
         </div>
 
-        <div className='border-t border-indigo-500 pt-5 pb-6  md:flex justify-between font-semibold text-white'>
+        <div className='border-t border-indigo-500 pt-5 pb-16  md:flex justify-between font-semibold text-white'>
             <p className='text-center md:text-start'>© 2024 CryptoLand - All Rights Reserved</p>
             <p className='text-center md:text-start'> Developed by Rasel</p>
         </div>
