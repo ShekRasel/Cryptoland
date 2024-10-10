@@ -8,6 +8,8 @@ import About from './pages/About';
 import Pages from './pages/Pages';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 let routes = createBrowserRouter([
     {
@@ -29,6 +31,14 @@ let routes = createBrowserRouter([
         },{
           path:'contact',
           element:<Contact/>
+        },
+        {
+          path:'signup',
+          element:<SignUp/>
+        },
+        {
+          path:'signin',
+          element:<SignIn/>
         },
       ]
     }
