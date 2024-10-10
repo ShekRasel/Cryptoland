@@ -1,15 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {createBrowserRouter,RouterProvider,Route,Link,} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import './index.css'
 import Home from './pages/Home'
 import Layout from './Layout';
 import About from './pages/About';
-import Pages from './pages/Pages';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import PasswordReset from './pages/PasswordReset';
 
 let routes = createBrowserRouter([
     {
@@ -22,9 +22,6 @@ let routes = createBrowserRouter([
         },{
           path:'about',
           element:<About/>
-        },{
-          path:'pages',
-          element:<Pages/>
         },{
           path:'blog',
           element:<Blog/>
@@ -39,6 +36,10 @@ let routes = createBrowserRouter([
         {
           path:'signin',
           element:<SignIn/>
+        },
+        {
+          path:'passwordReset',
+          element:<PasswordReset/>
         },
       ]
     }
