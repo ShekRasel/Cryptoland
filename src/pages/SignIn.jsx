@@ -2,6 +2,7 @@ import React from 'react'
 import CommonComponent from '../components/CommonComponent'
 import { FcGoogle } from "react-icons/fc";
 import { CiLock } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   return (
@@ -48,7 +49,7 @@ function SignIn() {
                 </div>
 
                 <p className='flex justify-center gap-2 mt-10 mb-10'>
-                    <span className='text-gray-500'>Don't have an account? </span><span className='text-blue-500'>Sign Up Here</span>
+                    <span className='text-gray-500'>Don't have an account? </span><span className='text-blue-500'><Link to={'/signup'}>Sign Up Here</Link></span>
                 </p>
             </div>
         </div>

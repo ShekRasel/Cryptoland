@@ -2,6 +2,7 @@ import React from 'react'
 import CommonComponent from '../components/CommonComponent'
 import { FcGoogle } from "react-icons/fc";
 import { CiLock } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 function SignUp() {
   return (
@@ -39,7 +40,7 @@ function SignUp() {
 
                 <button className='bg-blue-500 p-3 rounded-full text-white w-full mt-8 hover:bg-indigo-900 transition-all'>Create Account</button>
                 <p className='flex justify-center gap-2 mt-10 mb-10'>
-                    <span className='text-gray-500'>Already have an account? </span><span className='text-blue-500'>Sign In</span>
+                    <span className='text-gray-500'>Already have an account? </span><span className='text-blue-500'><Link to={'/signin'}>Sign In</Link></span>
                 </p>
             </div>
         </div>
