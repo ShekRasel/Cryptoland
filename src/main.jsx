@@ -5,13 +5,13 @@ import './index.css'
 import Home from './pages/Home'
 import Layout from './Layout';
 import About from './pages/About';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import PasswordReset from './pages/PasswordReset';
 import MailSuccess from './pages/MailSuccess';
 import Error from './pages/Error';
+import BlogGrid from './pages/BlogGrid';
 
 let routes = createBrowserRouter([
     {
@@ -24,9 +24,6 @@ let routes = createBrowserRouter([
         },{
           path:'about',
           element:<About/>
-        },{
-          path:'blog',
-          element:<Blog/>
         },{
           path:'contact',
           element:<Contact/>
@@ -49,6 +46,9 @@ let routes = createBrowserRouter([
         },{
           path: 'errorPage',
           element:<Error/>
+        },{
+          path: 'blogGrid',
+          element:<BlogGrid/>
         }
       ]
     }
