@@ -23,11 +23,11 @@ function Contact() {
           <div className='lg:w-1/2'>
             <h1 className='text-3xl font-semibold text-indigo-900'>Leave a message here</h1>
             <form action="" className='mt-8'>
-              <div className='flex gap-4'>
+              <div className='flex flex-col md:flex-row gap-4'>
                 <input type="text" name="" id="" className='p-3 bg-white text-gray-500 rounded-sm w-full shadow-md' placeholder='Name*'/>
                 <input type="text" name="" id="" className='p-3 bg-white text-gray-500 rounded-sm w-full shadow-md' placeholder='Email*'/>
               </div>
-              <div className='flex gap-4 mt-6'>
+              <div className='flex flex-col md:flex-row gap-4 mt-6'>
                 <input type="text" name="" id="" className='p-3 bg-white text-gray-500 rounded-sm w-full shadow-md' placeholder='Subject*'/>
                 <input type="text" name="" id="" className='p-3 bg-white text-gray-500 rounded-sm w-full shadow-md' placeholder='Phone*'/>
               </div>
