@@ -7,7 +7,7 @@ import { CiYoutube,CiMail } from "react-icons/ci";
 
 function Footer() {
   return (
-    <div className='bg-indigo-900 px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72'>
+    <div className='bg-[#24126A] px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72'>
         <div className=' pt-20 pb-14 text-white grid md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-0'>
             <div className=' lg:col-span-4 pr-4 '>
                 <div className=' flex justify-center md:block'>
@@ -46,8 +46,8 @@ function Footer() {
                 <h1 className='text-xl font-semibold text-center md:text-start'>Support</h1>
                 <p className='mt-7 font-semibold text-center md:text-start'>Subscribe to our newsletter for the latest updates</p>
                 <div className='mt-7 flex justify-center items-center'>
-                    <input type="text" className='px-4 py-4 rounded-l-md outline-none w-full bg-indigo-800 text-white' placeholder='Email Address'/>
-                    <span className='bg-indigo-700 p-[18px] rounded-r-md text-xl text-white'><CiMail /></span>
+                    <input type="text" className='px-4 py-4 rounded-l-md outline-none w-full bg-[#3F2F7C] text-white' placeholder='Email Address'/>
+                    <span className='bg-[#41329C] p-[18px] rounded-r-md text-xl text-white'><CiMail /></span>
                 </div>
             </div>
         </div>
