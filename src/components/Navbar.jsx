@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { FaBars } from "react-icons/fa6";
 import { NavLink,Link } from 'react-router-dom';
 import { TfiClose } from "react-icons/tfi";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 function Navbar() {
     const [bgColor,setBgColor] = useState(false);
     const [hamBurger, setHamBurger] = useState(false);
     const [pagesDiv, setPagesDiv] = useState(false);
     const [blogDiv, setBlogDiv] = useState(false);
+
+
 
     const showHidePagesDiv = ()=>{
         setPagesDiv(!pagesDiv);
@@ -125,33 +128,56 @@ function Navbar() {
         </div>
         
         {/*mobile and tab Screen nav start*/}
-        <div className={`px-3 md:px-8 mt-1 lg:hidden overflow-hidden ease-out transition[height] duration-500 ${hamBurger ? 'max-h-96':'max-h-0'}`}>
-            <div className='flex justify-center bg-white py-4 rounded-md'>
-                <ul className='flex flex-col gap-8'>
+        <div className='px-3 md:px-8 '>
+        <div className={`px-3 md:px-8 mt-1  bg-white rounded-md  lg:hidden overflow-y-scroll  ease-out transition-all duration-500 ${hamBurger ? 'max-h-96':'max-h-0'}`}>
+                <ul className='flex flex-col gap-6 w-full py-4'>
                 <li>
                             <NavLink 
                                 to={'/'}
                                 className={({isActive}) => isActive ? 'text-blue-500 font-extrabold':''}
+                                onClick={changeHamAndShowMenu}
                                 >Home</NavLink>
                         </li>
                         <li>
                             <NavLink 
                                 to={'about'}
                                 className={({isActive}) => isActive ? 'text-blue-500 font-extrabold':''}
+                                 onClick={changeHamAndShowMenu} 
                                 >About</NavLink>
                         </li>
-                        <li>
-                            <h1 >Pages</h1>
+                        <li className='cursor-pointer' onClick={showHidePagesDiv}>
+                               <div className='flex items-center w-full justify-between'>
+                                    <h1 >Pages</h1> <MdKeyboardArrowDown className={`text-xl transition-all ease-out duration-500 ${pagesDiv ? 'rotate-180':''}`}/>
+                               </div>
+
+                               <div className={` overflow-hidden transition-all ease-out duration-500 ${pagesDiv ? 'max-h-96':'max-h-0'}`}>
+                                    <ul className='text-gray-500  font-semibold flex flex-col gap-4 py-4 pr-20 pl-10'>
+                                        <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'about'}>About Us</Link></li>
+                                        <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'signin'}>Sign In</Link></li>
+                                        <li onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'signup'}>Sign UP</Link></li>
+                                        <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'passwordReset'}>Reset Password</Link></li>
+                                        <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'mailSusscess'}>Mail Sussess</Link></li>
+                                        <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'errorPage'}>404 Error</Link></li>
+                                    </ul>
+                               </div>
                         </li>
-                        <li>
+                        <li className='cursor-pointer' onClick={showHideBlogDiv}>
+                            <div className='flex items-center w-full justify-between'>
+                                <h1 >Blogs</h1> <MdKeyboardArrowDown className={`text-xl transition-all ease-out duration-500 ${blogDiv ? 'rotate-180':''}`}/>
+                            </div>
+                            <div className={` overflow-hidden transition-all ease-out duration-500 ${blogDiv ? 'max-h-96':'max-h-0'}`}>
+                                <ul className='text-gray-500  font-semibold flex flex-col gap-4 py-4 pr-20 pl-10'>
+                                    <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'blogGrid'}>Blog Grid</Link></li>
+                                    <li  onClick={changeHamAndShowMenu} className='hover:text-indigo-700'><Link to={'singleBlog'}>Blog Single</Link></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li
+                            onClick={changeHamAndShowMenu}
+                        >
                             <NavLink 
                                 className={({isActive})=>isActive ? 'text-blue-500 font-extrabold':''}
-                                to={'blog'}>Blog</NavLink>
-                        </li>
-                        <li>
-                            <NavLink 
-                                className={({isActive})=>isActive ? 'text-blue-500 font-extrabold':''}
-                                to={'contact'}>Contact</NavLink>
+                                to={'contact'}>Contact</NavLink>  
                         </li>
 
                 </ul>
@@ -159,7 +185,7 @@ function Navbar() {
         </div>
         {/*mobile and tab Screen nav end*/}
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar
