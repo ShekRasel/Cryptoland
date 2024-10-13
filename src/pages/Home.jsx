@@ -6,21 +6,24 @@ import Testimonials from '../components/Testimonials'
 import Blog from '../components/Blog'
 import Faq from '../components/Faq'
 import SetUpAndStarted from '../components/SetUpAndStarted'
+import { Link } from 'react-router-dom'
 function Home() {
   return (
     <div className=''>
-        <div className=" w-full bg-indigo-900 h-[80%] px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72  flex justify-center lg:justify-between items-center pt-52 pb-32">
+      <div className='relative'>
+        <div class=" left-0 w-full h-[500px] lg:h-[760px] bg-indigo-900 transform top-2 rounded-b-[30px] md:rounded-b-[70px] xl:rounded-b-[130px] -skew-y-6"></div>
+        <div className=" absolute top-0 rounded-r-full w-full bg-indigo-900 h-[80%] px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72  flex justify-center lg:justify-between items-center pt-52 pb-32 lg:gap-4 xl:gap-0">
 
-          <div className='text-white flex flex-col items-center lg:items-start'>
-            <h1 className='font-bold text-lg '>Start Envesting & Earn Money</h1>
-            <h1 className='text-4xl font-bold mt-5 pl-1'>Say Goodbye To</h1>
-            <h1 className='text-4xl font-bold mt-5 pl-1'>Idle Money.</h1>
+          <div className='text-white flex flex-col items-center lg:items-start mt-16 lg:mt-36'>
+            <h1 className='font-bold lg:text-lg '>Start Envesting & Earn Money</h1>
+            <h1 className='text-3xl lg:text-5xl font-bold lg:mt-5 md:mt-3 pl-1 italic'>Say Goodbye To</h1>
+            <h1 className='text-3xl lg:text-5xl font-bold lg:mt-5 md:mt-3 pl-1 italic'>Idle Money.</h1>
             <p className='pl-2 mt-8 font-semibold text-center lg:text-start'>Invest Your spare change in Bitcoin and save with <br /> crypto to e arn interest in real time.</p>
             <button className='mt-12  px-7 py-3 rounded-full bg-blue-500 font-semibold transition-all ease-in-out duration-500 hover:bg-white hover:text-indigo-800'>
-              Discover More
+              <Link to={'about'}>Discover More</Link>
             </button>
           </div>
-          <div className=' relative hidden lg:block'>
+          <div className=' relative hidden lg:block mt-32 '>
             <div>
               <img src="images/home2-bg.png" alt="" className='mr-24'/>
             </div>
@@ -30,7 +33,10 @@ function Home() {
             </div>
           </div>
 
+          
         </div>
+      </div>
+        
 
 
         <div className=' bg-white 2xl:px-72 items-center justify-center flex flex-col  mt-24'>
@@ -55,7 +61,6 @@ function Home() {
         <Blog/>
 
         <Faq/>
-        
     </div>
   )
 }
