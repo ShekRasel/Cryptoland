@@ -121,7 +121,7 @@ function Navbar() {
 
                 <div className='hidden md:block'>
                     <button className={` text-indigo-500 px-8 py-3 rounded-full border hover:bg-blue-500 transition-all ease-out duration-500 hover:text-white ${bgColor ? 'bg-blue-500 text-white transition-all ease-out duration-500 hover:bg-indigo-800': 'transition-all ease-out duration-500 bg-white'}`}>
-                        Get Started
+                       <Link to={'signup'}> Get Started</Link>
                     </button>
                 </div>
             </div>
