@@ -89,7 +89,7 @@ function Navbar() {
                                         <div className={` overflow-hidden rounded-md bg-white transition-all ease-out duration-500 shadow-lg ${blogDiv ? 'max-h-96':'max-h-0'}`}>
                                             <ul className='text-gray-500  font-semibold flex flex-col gap-4 py-4 pr-20 pl-10'>
                                                 <li className='hover:text-indigo-700'><Link to={'blogGrid'}>Blog Grid</Link></li>
-                                                <li className='hover:text-indigo-700'><Link>Blog Single</Link></li>
+                                                <li className='hover:text-indigo-700'><Link to={'singleBlog'}>Blog Single</Link></li>
                                             </ul>
                                         </div>
                                     </div>:

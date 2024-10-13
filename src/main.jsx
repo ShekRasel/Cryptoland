@@ -12,6 +12,7 @@ import PasswordReset from './pages/PasswordReset';
 import MailSuccess from './pages/MailSuccess';
 import Error from './pages/Error';
 import BlogGrid from './pages/BlogGrid';
+import SingleBlog from './pages/SingleBlog';
 
 let routes = createBrowserRouter([
     {
@@ -49,6 +50,9 @@ let routes = createBrowserRouter([
         },{
           path: 'blogGrid',
           element:<BlogGrid/>
+        },{
+          path: 'singleBlog',
+          element:<SingleBlog/>
         }
       ]
     }
