@@ -24,8 +24,8 @@ function SingleBlog() {
                 How We Do A Concert In Pandemic
                 </h1>
                 <div className='mt-7 md:flex gap-4'>
-                    <img src="/public/images/blog-inner1.jpg" alt="" className='md:w-1/2 rounded-md'/>
-                    <img src="/public/images/blog-inner2.jpg" alt="" className='md:w-1/2 rounded-md mt-10 md:mt-0'/>
+                    <img src="images/blog-inner1.jpg" alt="" className='md:w-1/2 rounded-md'/>
+                    <img src="images/blog-inner2.jpg" alt="" className='md:w-1/2 rounded-md mt-10 md:mt-0'/>
                 </div>
                 <p className=' text-sm text-gray-500 mt-7'>
                 Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway
