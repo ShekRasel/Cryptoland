@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className=''>
       <div className='relative'>
-        <div class=" left-0 w-full h-[500px] lg:h-[760px] bg-[#24126A] transform top-2 rounded-b-[30px] md:rounded-b-[70px] xl:rounded-b-[130px] -skew-y-6"></div>
+        <div className=" left-0 w-full h-[500px] lg:h-[760px] bg-[#24126A] transform top-2 rounded-b-[30px] md:rounded-b-[70px] xl:rounded-b-[130px] -skew-y-6"></div>
         <div className=" absolute top-0 rounded-r-full w-full bg-[#24126A] h-[80%] px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72  flex justify-center lg:justify-between items-center pt-52 pb-32 lg:gap-4 xl:gap-0">
 
           <div className='text-white flex flex-col items-center lg:items-start mt-16 lg:mt-36'>
