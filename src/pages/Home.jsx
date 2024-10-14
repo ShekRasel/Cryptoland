@@ -7,6 +7,7 @@ import Blog from '../components/Blog'
 import Faq from '../components/Faq'
 import SetUpAndStarted from '../components/SetUpAndStarted'
 import { Link } from 'react-router-dom'
+import Roadmap from '../components/Roadmap'
 function Home() {
   return (
     <div className=''>
@@ -55,6 +56,8 @@ function Home() {
         <TeamMate/>
 
         <PromoVideo/>
+
+        <Roadmap/>
 
         <Testimonials/>
 
