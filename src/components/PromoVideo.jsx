@@ -13,13 +13,13 @@ function PromoVideo() {
             <div className=' rounded-t-3xl p-8 bg-[#41327C] h-64 mt-[126px] border-gray-400 border'>  
             </div> 
 
-            <div className='bg-white rounded-3xl pt-4 pb-4 md:pt-20 md:pb-20 border absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 md:w-5/6 xl:w-4/6 mt-52 shadow-md px-4'>
+            <div className='bg-white rounded-3xl pt-4 pb-4 md:pt-20 md:pb-20 border absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 md:w-5/6  xl:w-5/6 2xl:w-4/6 mt-52 shadow-md px-4'>
                         <h1 className='text-blue-600  text-center text-lg'>Create your own experience</h1>
                         <h1 className='text-4xl mt-5 text-indigo-900 font-bold text-center'>Watch our Intro Video</h1>
                         <p className='text-gray-500 mt-6 text-center'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
-                        <div className='mt-20 flex justify-center '>
+                        <div className='mt-10 md:mt-20 flex justify-center '>
                                 <div className='flex justify-center border rounded-full p-3'>
-                                    <span className='text-2xl border rounded-full bg-blue-600 p-8 text-white hover:bg-indigo-900 animate-pulse'>
+                                    <span className='text-2xl border rounded-full bg-blue-600 p-6 md:p-8 text-white hover:bg-indigo-900 animate-pulse'>
                                         <IoPlayOutline className='' onClick={playVideo}/>
                                     </span>
                                 </div>
