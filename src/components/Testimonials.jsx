@@ -69,7 +69,6 @@ function Testimonials() {
             </div>
        </div>
 
-       <FadeUpComponent>
         <div className=' mt-12  '>
             <div className='  '>
                 <div className='flex overflow-hidden gap-'>
@@ -79,7 +78,7 @@ function Testimonials() {
                                 style={{transform:`translateX(-${currentIndex * 100}%)`}}
                                 >
                                     
-
+                                    <FadeUpComponent key={index} delay ={index * 0.2}>
                                     <div className=' px-4 pb-8 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all ease-in-out duration-500 relative'>
                                     <div className='h-8 bg-blue-600 right-0 w-8 absolute rounded-es-full'>
                                     </div>
@@ -93,6 +92,7 @@ function Testimonials() {
                                         </div>
                                         
                                     </div>
+                                    </FadeUpComponent>
                                 </div>
                             ))
                         }
@@ -104,7 +104,6 @@ function Testimonials() {
                 <button className='bg-blue-600 rounded-md  text-white p-4' onClick={slideRight}><FaLongArrowAltRight /></button>
             </div>
         </div>
-</FadeUpComponent>
 
     </div>
   )

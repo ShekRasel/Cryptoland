@@ -50,9 +50,9 @@ function TeamMate() {
       <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-16 gap-12 xl:gap-0 '>
         {
           teams.map((team,index)=>( 
-            <FadeUpComponent>
+            <FadeUpComponent key={index} delay ={index * 0.3}>
 
-            <div className='flex flex-col items-center' key={index}  onMouseEnter={()=>showPersonLink(index)} onMouseLeave={hidePersonLink}>
+            <div className='flex flex-col items-center'   onMouseEnter={()=>showPersonLink(index)} onMouseLeave={hidePersonLink}>
                 <img src={team.photo} className='rounded-full w-48 border p-4' />
                 <h1 className='mt-2 md:mt-6 text-xl text-indigo-900'>{team.Name}</h1>
                 <h1 className='text-gray-500 mt-2'>{team.designation}</h1>

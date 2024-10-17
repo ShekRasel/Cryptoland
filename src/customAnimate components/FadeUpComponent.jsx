@@ -2,17 +2,19 @@
 import React from 'react';
 import useFadeUpOnScroll from '../CustomHooks/useFadeUpOnScroll';
 
-const FadeUpComponent = ({children}) => {
+const FadeUpComponent = ({children, delay = 0}) => {
   const { ref, isVisible } = useFadeUpOnScroll();
 
   return (
     <div
       ref={ref}
-      className={`transition-all ease-out duration-1000 ${
-        isVisible ? 'transform translate-y-0 opacity-100' : 'transform translate-y-32 opacity-0'
-      }`}
+      style={{
+        transform: isVisible ? 'translateY(0)' : 'translateY(80px)',
+        opacity: isVisible ? 1 : 0,
+        transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
+      }}
     >
-     {children}
+      {children}
     </div>
   );
 };

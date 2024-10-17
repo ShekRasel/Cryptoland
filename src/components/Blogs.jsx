@@ -2,6 +2,7 @@ import React from 'react'
 import { RiTimerLine } from "react-icons/ri";
 import { GoPerson } from "react-icons/go";
 import { Link } from 'react-router-dom';
+import FadeUpComponent from '../customAnimate components/FadeUpComponent';
 
 function Blogs({value,aditionalBlogs = []}) {
     const blogs = [
@@ -38,31 +39,33 @@ function Blogs({value,aditionalBlogs = []}) {
 
             {
                 allBlogs.map((blog,index)=>(
-                    <div className='bg-gray-50 rounded-md shadow-md overflow-hidden' key={index}>
-                        <img src={blog.image} className=' rounded-t-md hover:scale-110 transition-all ease-out duration-500' alt="" />
-                        <div className='py-8 px-6'>
-                            <div className='flex gap-5 items-center'>
-                                <div className='flex gap-2 items-center'>
-                                    <span className='text-indigo-500'><RiTimerLine /></span>
-                                    <span>{blog.time}</span>
+                    <FadeUpComponent key={index} delay ={index * 0.2}>
+                        <div className='bg-gray-50 rounded-md shadow-md overflow-hidden' key={index}>
+                            <img src={blog.image} className=' rounded-t-md hover:scale-110 transition-all ease-out duration-500' alt="" />
+                            <div className='py-8 px-6'>
+                                <div className='flex gap-5 items-center'>
+                                    <div className='flex gap-2 items-center'>
+                                        <span className='text-indigo-500'><RiTimerLine /></span>
+                                        <span>{blog.time}</span>
+                                    </div>
+                                    <div className='flex gap-2 items-center'>
+                                        <span className='text-indigo-500'><GoPerson /></span>
+                                        <span>{blog.name}</span>
+                                    </div>
                                 </div>
-                                <div className='flex gap-2 items-center'>
-                                    <span className='text-indigo-500'><GoPerson /></span>
-                                    <span>{blog.name}</span>
-                                </div>
+
+                                <Link>
+                                    <h1 className='text-indigo-900 font-semibold text-2xl mt-7'>{blog.header}</h1>
+                                </Link>
+
+                                <p className='mt-7 text-gray-500 font-semibold'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium sit fuga architecto assumenda. Lorem ipsum dolor sit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                
+                                <Link>
+                                    <h1 className='mt-7 text-indigo-500 underline'>{blog.link}</h1>
+                                </Link>
                             </div>
-
-                            <Link>
-                                <h1 className='text-indigo-900 font-semibold text-2xl mt-7'>{blog.header}</h1>
-                            </Link>
-
-                            <p className='mt-7 text-gray-500 font-semibold'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium sit fuga architecto assumenda. Lorem ipsum dolor sit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            
-                            <Link>
-                                <h1 className='mt-7 text-indigo-500 underline'>{blog.link}</h1>
-                            </Link>
                         </div>
-                    </div>
+                    </FadeUpComponent>
                 ))
             }
 
