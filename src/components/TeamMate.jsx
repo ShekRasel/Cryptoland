@@ -3,6 +3,8 @@ import { RiFacebookFill } from "react-icons/ri";
 import { CiInstagram } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
 import { FaTwitter } from "react-icons/fa";
+import FadeUpComponent from '../customAnimate components/FadeUpComponent';
+import GrowUpElem from './../customAnimate components/GrowUpElem';
 
 function TeamMate() {
   const [showLink, setShowLink] = useState(null);
@@ -34,15 +36,22 @@ function TeamMate() {
     <div className='px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72 pt-24 mb-24'>
      <div className='flex justify-center'>
         <div className='lg:w-1/2'>
+        <GrowUpElem>
+
           <h2 className='text-blue-600 text-center text-lg font-semibold'>Expert Team</h2>
+        </GrowUpElem>
+        <FadeUpComponent>
           <h1 className='text-indigo-900 text-3xl font-semibold mt-6 text-center'>Meet Our Team</h1>
           <p className='text-gray-500 text-center mt-4'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+        </FadeUpComponent>
 
         </div>
      </div>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-16 gap-12 xl:gap-0 '>
         {
           teams.map((team,index)=>( 
+            <FadeUpComponent>
+
             <div className='flex flex-col items-center' key={index}  onMouseEnter={()=>showPersonLink(index)} onMouseLeave={hidePersonLink}>
                 <img src={team.photo} className='rounded-full w-48 border p-4' />
                 <h1 className='mt-2 md:mt-6 text-xl text-indigo-900'>{team.Name}</h1>
@@ -56,6 +65,7 @@ function TeamMate() {
                   </div>
                 </div>
             </div>
+            </FadeUpComponent>
           ))
         }
 

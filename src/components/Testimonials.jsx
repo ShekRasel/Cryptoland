@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import FadeUpComponent from '../customAnimate components/FadeUpComponent';
+import GrowUpElem from '../customAnimate components/GrowUpElem';
 
 function Testimonials() {
     const [currentIndex , setCurrentIndex] = useState(0);
@@ -55,12 +57,19 @@ function Testimonials() {
 
        <div className='flex justify-center'>
             <div className='lg:w-1/2'>
+            <GrowUpElem>
                 <h1 className='text-lg font-semibold text-blue-600 text-center'>Customer Reviews</h1>
+            </GrowUpElem>
+            <GrowUpElem>
                 <h1 className='text-4xl font-semibold text-indigo-900 text-center mt-4'>Our Testimonials</h1>
+            </GrowUpElem>
+            <FadeUpComponent>
                 <p className='text-gray-500 xl:px-34 text-center mt-8'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+</FadeUpComponent>
             </div>
        </div>
 
+       <FadeUpComponent>
         <div className=' mt-12  '>
             <div className='  '>
                 <div className='flex overflow-hidden gap-'>
@@ -95,6 +104,8 @@ function Testimonials() {
                 <button className='bg-blue-600 rounded-md  text-white p-4' onClick={slideRight}><FaLongArrowAltRight /></button>
             </div>
         </div>
+</FadeUpComponent>
+
     </div>
   )
 }

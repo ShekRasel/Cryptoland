@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { IoPlayOutline } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
+import FadeUpComponent from '../customAnimate components/FadeUpComponent';
+import GrowUpElem from '../customAnimate components/GrowUpElem';
 
 function PromoVideo() {
     const [play , setIsPlay ] = useState(false);
@@ -14,9 +16,17 @@ function PromoVideo() {
             </div> 
 
             <div className='bg-white rounded-3xl pt-4 pb-4 md:pt-20 md:pb-20 border absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 md:w-5/6  xl:w-5/6 2xl:w-4/6 mt-52 shadow-md px-4'>
+            <GrowUpElem>
                         <h1 className='text-blue-600  text-center text-lg'>Create your own experience</h1>
+            </GrowUpElem>
+           
+            <FadeUpComponent>
+
                         <h1 className='text-4xl mt-5 text-indigo-900 font-bold text-center'>Watch our Intro Video</h1>
+            </FadeUpComponent>
+            <FadeUpComponent>
                         <p className='text-gray-500 mt-6 text-center'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+            </FadeUpComponent>
                         <div className='mt-10 md:mt-20 flex justify-center '>
                                 <div className='flex justify-center border rounded-full p-3'>
                                     <span className='text-2xl border rounded-full bg-blue-600 p-6 md:p-8 text-white hover:bg-indigo-900 animate-pulse'>

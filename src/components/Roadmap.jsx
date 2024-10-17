@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import FadeUpComponent from '../customAnimate components/FadeUpComponent';
+import GrowUpElem from '../customAnimate components/GrowUpElem';
 
 function  Roadmap() {
     const [currentIndex , setCurrentIndex] = useState(0);
@@ -26,8 +28,12 @@ function  Roadmap() {
 
        <div className='flex justify-center'>
             <div className='lg:w-1/2'>
+            <GrowUpElem>
                 <h1 className='text-4xl font-semibold text-indigo-900 text-center mt-4'>Road Map</h1>
+            </GrowUpElem>
+            <FadeUpComponent>
                 <p className='text-gray-500 xl:px-34 text-center mt-8'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+</FadeUpComponent>
             </div>
        </div>
 

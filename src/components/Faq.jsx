@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { HiPlus,HiOutlineMinus } from "react-icons/hi2";
+import FadeUpComponent from '../customAnimate components/FadeUpComponent';
+import GrowUpElem from '../customAnimate components/GrowUpElem';
 
 function Faq() {
     const [open,setIsOpen] = useState(null);
@@ -36,9 +38,16 @@ function Faq() {
 
         <div className='w-full  flex justify-center'>
                 <div className='w-full md:w-3/4 xl:w-1/2  text-center'>
+                <GrowUpElem>
                     <h2 className='text-lg text-blue-600'>Faq</h2>
+                </GrowUpElem>
+                <GrowUpElem>
                     <h1 className='text-4xl font-semibold text-indigo-900 mt-3'>Frequently Asked Questions</h1>
+                </GrowUpElem>
+                <FadeUpComponent>
+                    
                     <p className='text-gray-500 mt-5 '>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                </FadeUpComponent>
                     </div>
         </div>
 
