@@ -1,63 +1,59 @@
-import React from 'react'
-import { FaFacebookF,FaInstagram } from "react-icons/fa";
-import { FiTwitter } from "react-icons/fi";
-import { RiLinkedinBoxLine } from "react-icons/ri";
-import { CiYoutube,CiMail } from "react-icons/ci";
-
-
-function Footer() {
+import { Link } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
+export default function Footer() {
   return (
-    <div className='bg-[#24126A] px-3 md:px-8 lg:px-12 xl:px-16 2xl:px-72'>
-        <div className=' pt-20 pb-14 text-white grid md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-0'>
-            <div className=' lg:col-span-4 pr-4 '>
-                <div className=' flex justify-center md:block'>
-                    <img src="logo/white-logo.svg" className='h-9'/>
-                </div>
-                <p className=' font-semibold mt-5 text-sm text-center md:text-start'>Making the world a better place through constructing elegant hierarchies.</p>
-                <h1 className='font-bold mt-6 text-lg  text-center md:text-start'>Follow Us On:</h1>
-                <div className='mt-5 flex gap-5 justify-center md:justify-start'>
-                    <span className='transition-all ease-out duration-500 hover:text-blue-600'><FaFacebookF /></span>
-                    <span className='transition-all ease-out duration-500 hover:text-blue-600'><FaInstagram /></span>
-                    <span className='transition-all ease-out duration-500 hover:text-blue-600'><FiTwitter /></span>
-                    <span className='transition-all ease-out duration-500 hover:text-blue-600'><RiLinkedinBoxLine /></span>
-                    <span className='transition-all ease-out duration-500 hover:text-blue-600'><CiYoutube /></span>
-                </div>
-
-            </div>
-
-            <div className=' lg:col-span-2'>
-                <h1 className='text-xl font-semibold text-center md:text-start'>Solutions</h1>
-                <h2 className='font-semibold mt-7 text-center md:text-start'>Marketing</h2>
-                <h2 className='font-semibold mt-3 text-center md:text-start'>Analytics</h2>
-                <h2 className='font-semibold mt-3 text-center md:text-start'>Commerce</h2>
-                <h2 className='font-semibold mt-3 text-center md:text-start'>Insights</h2>
-
-            </div>
-
-            <div className=' lg:col-span-2'>
-                <h1 className='text-xl font-semibold text-center md:text-start'>Support</h1>
-                <h2 className='font-semibold mt-7 text-center md:text-start'>Pricing</h2>
-                <h2 className='font-semibold mt-3 text-center md:text-start'>Documentation</h2>
-                <h2 className='font-semibold mt-3 text-center md:text-start'>Guide</h2>
-                <h2 className='font-semibold mt-3 text-center md:text-start'>API Status</h2>
-            </div>
-
-            <div className=' lg:col-span-4'>
-                <h1 className='text-xl font-semibold text-center md:text-start'>Support</h1>
-                <p className='mt-7 font-semibold text-center md:text-start'>Subscribe to our newsletter for the latest updates</p>
-                <div className='mt-7 flex justify-center items-center'>
-                    <input type="text" className='px-4 py-4 rounded-l-md outline-none w-full bg-[#3F2F7C] text-white' placeholder='Email Address'/>
-                    <span className='bg-[#41329C] p-[18px] rounded-r-md text-xl text-white'><CiMail /></span>
-                </div>
-            </div>
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <Link className="brand" to="/">
+              <span className="brand-mark">
+                c<span />
+              </span>
+              crypto<span className="brand-light">land</span>
+              <span className="brand-dot">.</span>
+            </Link>
+            <p>
+              A clearer way to explore crypto.
+              <br />
+              Built for your next chapter.
+            </p>
+            <span className="footer-location">
+              <span /> Made for a connected world
+            </span>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <Link to="/about">About us</Link>
+            <a href="/#features">Our features</a>
+            <Link to="/blogGrid">Learning hub</Link>
+          </div>
+          <div>
+            <h3>Get started</h3>
+            <Link to="/signup">Create an account</Link>
+            <Link to="/signin">Log in</Link>
+            <Link to="/passwordReset">Account help</Link>
+          </div>
+          <div className="footer-contact">
+            <h3>Let’s talk</h3>
+            <p>
+              Have a question or an idea?
+              <br />
+              We’d love to hear from you.
+            </p>
+            <Link to="/contact">
+              Get in touch <FiArrowUpRight />
+            </Link>
+          </div>
         </div>
-
-        <div className='border-t border-indigo-500 pt-5 pb-16  md:flex justify-between font-semibold text-white'>
-            <p className='text-center md:text-start'>© 2024 CryptoLand - All Rights Reserved</p>
-            <p className='text-center md:text-start'> Developed by Rasel</p>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} Cryptoland. Designed with purpose.</p>
+          <p>Frontend concept · No real transactions</p>
+          <span>
+            Developed by Rasel <FiArrowUpRight />
+          </span>
         </div>
-    </div>
-  )
+      </div>
+    </footer>
+  );
 }
-
-export default Footer

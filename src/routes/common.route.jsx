@@ -55,6 +55,7 @@ export const routes = [
         path: "singleBlog",
         element: <SingleBlog />,
       },
+      { path: "*", element: <Error /> },
     ],
   },
 ];

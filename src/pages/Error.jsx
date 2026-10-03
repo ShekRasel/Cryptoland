@@ -1,27 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-function Error() {
+import { Link } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
+export default function Error() {
   return (
-    <div className='h-screen bg-indigo-500 flex justify-center items-center'>
-        <div className='bg-white rounded-md shadow-md  p-16 '>
-            <div className='flex flex-col items-center'>
-                <h1 className='text-8xl font-bold text-blue-500'>
-                    404
-                </h1>
-                <p className='mt-8 text-indigo-900 text-center  text-2xl font-semibold'>The page you were looking for
-                doesn't exist anymore.</p>
-
-                <p className='mt-8 text-gray-500 text-center'>It might have been moved or deleted.</p>
-                
-                <Link to={'/'}>
-                    <button className='text-white bg-blue-500 p-3 px-7 rounded-full hover:bg-indigo-900 transition-all mt-8'>Back To Home</button>
-                </Link>
-            </div>
-
-        </div>
-    </div>
-  )
+    <section className="status-page container">
+      <span className="error-number">
+        404<span>✦</span>
+      </span>
+      <span className="eyebrow">A LITTLE OFF THE MAP</span>
+      <h1>Let’s find your way back.</h1>
+      <p>
+        This page may have moved, or the link may be incorrect. There’s still
+        plenty to explore.
+      </p>
+      <Link className="button" to="/">
+        Back to home <FiArrowUpRight />
+      </Link>
+      <Link className="text-link" to="/contact">
+        Need a hand? Contact us
+      </Link>
+    </section>
+  );
 }
-
-export default Error
